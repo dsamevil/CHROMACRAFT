@@ -1,0 +1,81 @@
+/* Reset default margins and paddings */
+body, h1, h2, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and text color for the body */
+body {
+    background-color: #f1f1f1;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.title-box {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black; /* Add border to the title box only */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 3px;
+}
+
+form {
+    margin-top: 5px;
+    margin-bottom: 0; /* Remove margin from bottom */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-evenly; /* Center images horizontally */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.image {
+    width: 107%; /* Adjust the width as needed */
+    max-width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1px; /* Add padding for slight spacing between images */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/* Add space after the CONVERT button and output images */
+.button-space {
+    margin-bottom: 20px;
+}
+
+/* Style the "CLEAR" button */
+form[action="/clear"] {
+    margin-top: 20px;
+}
