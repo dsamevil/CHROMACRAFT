@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHROMA CRAFT: Unleashing the Colors within Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="title-box"> <!-- Add a div for the title box -->
+        <h1>CHROMA CRAFT</h1>
+        <h2>Unleashing the Colors within Images</h2>
+    </div>
+    <!-- <h1>IMAGE COLORISING AND ENHANCEMENT</h1> -->
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">CONVERT</button>
+    </form>
+    <div class="button-space"></div>
+    <div class="image-row">
+        <div class="image-container">
+            <h2>INPUT IMAGE</h2>
+            <img class="image" src="{{ url_for('static', filename='uploads/input_image.jpg') }}">
+            <a>
+            <a href="{{ url_for('static', filename='uploads/input_image.jpg') }}" download>
+                <button>Download</button>
+            </a>
+        </div>
+        <div class="image-container">
+            <h2>COLORIZED IMAGE</h2>
+            <img class="image" src="{{ url_for('static', filename='colorized/colorized_output.jpg') }}">
+            <a href="{{ url_for('static', filename='colorized/colorized_output.jpg') }}" download>
+                <button>Download</button>
+            </a>
+        </div>
+        <div class="image-container">
+            <h2>ENHANCED IMAGE</h2>
+            <img class="image" src="{{ url_for('static', filename='enhanced/enhanced_output.jpg') }}">
+            <a href="{{ url_for('static', filename='enhanced/enhanced_output.jpg') }}" download>
+                <button>Download</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="button-space"></div> 
+    
+    <form action="/clear" method="post">
+        <button type="submit">CLEAR</button>
+    </form>
+    
+    <footer>
+        <p>- Created by Mevil Dsa</p>
+    </footer>
+</body>
+</html>
